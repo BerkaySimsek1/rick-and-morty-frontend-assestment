@@ -47,6 +47,7 @@ const CharacterTable: React.FC<CharacterTableProps> = ({
     >
       <thead>
         <tr>
+          {/* Sıralama işlemi burada oluyor*/}
           <th onClick={() => handleSort("name")}>
             İsim{" "}
             {sortConfig.key === "name" &&

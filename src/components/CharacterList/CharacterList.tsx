@@ -70,7 +70,7 @@ const CharacterList: React.FC = () => {
     <Container className="align-items-center">
       <Row>
         <Col>
-          {/* Filtreleme bileşeni */}
+          {/* Filtreleme kısmı */}
           <Filters
             filters={filters}
             onFilterChange={setFilters}
@@ -81,9 +81,9 @@ const CharacterList: React.FC = () => {
       </Row>
       <Row>
         <Col>
-          // dasdas
+          {/* Eğer filtreleme veya aramada herhangi bir sonuç yoksa hata mesajı vermesini sağlayacak if kontrolü*/}
           {displayedCharacters.length > 0 ? (
-            /* Tablo bileşeni */
+            /* Tablo kısmı */
             <CharacterTable
               characters={displayedCharacters}
               sortConfig={sortConfig}
@@ -101,7 +101,7 @@ const CharacterList: React.FC = () => {
       </Row>
       <Row>
         <Col>
-          {/* Sayfalama bileşeni */}
+          {/* Pagination kısmı */}
           <PaginationComponent
             page={page}
             totalPages={totalPages}

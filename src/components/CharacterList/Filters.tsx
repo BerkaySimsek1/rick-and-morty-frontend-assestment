@@ -37,7 +37,7 @@ const Filters: React.FC<FiltersProps> = ({
         style={{ maxWidth: "300px", marginRight: "10px" }}
       />
 
-      {/* Dropdown (Durum ve Cinsiyet) */}
+      {/* Filtreleme işlemleri için dropdown */}
       <Dropdown style={{ marginRight: "10px" }}>
         <Dropdown.Toggle variant="primary" id="filter-dropdown">
           Filtrele
@@ -73,7 +73,7 @@ const Filters: React.FC<FiltersProps> = ({
         </Dropdown.Menu>
       </Dropdown>
 
-      {/* Tablo Boyutu Ayarı */}
+      {/* Boyut değiştirme kısmı */}
       <Form.Select
         value={pageSize}
         onChange={(e) => onPageSizeChange(Number(e.target.value))}
