@@ -1,13 +1,14 @@
 {
+  "homepage": "https://BerkaySimsek1.github.io/rick-and-morty-frontend-assestment",
   "name": "rick-and-morty-frontend-assestment",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "predeploy": "npm run build",
+  "deploy": "gh-pages -d build",
+  "start": "react-scripts start",
+  "build": "react-scripts build"
   },
   "dependencies": {
     "@types/react-router-dom": "^5.3.3",
