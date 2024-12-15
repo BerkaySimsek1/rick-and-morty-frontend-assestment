@@ -20,6 +20,7 @@ const CharacterList: React.FC = () => {
     null
   );
   const [page, setPage] = useState<number>(1);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   const [totalPages, setTotalPages] = useState<number>(1);
   const [filters, setFilters] = useState<CharacterFilters>({
     name: undefined,
@@ -37,8 +38,10 @@ const CharacterList: React.FC = () => {
   useEffect(() => {
     const loadCharacters = async () => {
       try {
+        setIsLoading(true);
         const characters = await fetchAllCharacters(filters);
         setAllCharacters(characters);
+        setIsLoading(false);
       } catch (error) {
         console.error("Karakterler yüklenirken hata oluştu:", error);
       }
@@ -94,7 +97,7 @@ const CharacterList: React.FC = () => {
           ) : (
             /* Sonuç bulunamadı mesajı */
             <div className="text-center my-4">
-              <h5>Sonuç bulunamadı</h5>
+              {isLoading ? <h5>Yükleniyor</h5> : <h5>Sonuç bulunamadı</h5>}
             </div>
           )}
         </Col>
