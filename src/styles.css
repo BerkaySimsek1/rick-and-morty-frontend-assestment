@@ -1,0 +1,13 @@
+body {
+    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  table th {
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  table tr:hover {
+    background-color: #e9ecef;
+  }
